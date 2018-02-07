@@ -92,6 +92,7 @@
           <p>
             <img src="bluerose.jpeg">
           </p>
+          <pre>
           <?php
            //echo phpinfo();
            error_reporting(-1);
@@ -111,6 +112,7 @@
             }
           oci_close($conn);
           ?>
+          </pre>
         </div>
       </div>
         </div><!-- /col -->
