@@ -94,11 +94,9 @@
           </p>
           <pre>
           <?php
-            <?php session_start(); ?>
-            <?php $_SESSION['test_var'] = "ciao a tutti"; ?>
-              <pre>
-              <?php print_r($_SESSION); ?>
-              </pre> 
+             session_start();
+             $_SESSION['test_var'] = "ciao a tutti";
+             print_r($_SESSION);
            //echo phpinfo();
            error_reporting(-1);
            ini_set('display_errors', 'On');
