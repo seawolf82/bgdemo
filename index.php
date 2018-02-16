@@ -97,11 +97,13 @@
              session_start();
              $_SESSION['test_var'] = "ciao a tutti";
              print_r($_SESSION);
+             echo "Environment: " .getenv("DEPLOY_ENVIRONMENT") ."<br />";
            //echo phpinfo();
            error_reporting(-1);
            ini_set('display_errors', 'On');
            //echo "test";
-           $conn=oci_connect("stage","stage","192.168.3.81:1521/xe");
+           //$conn=oci_connect("stage","stage","192.168.3.81:1521/xe");
+             $conn=oci_connect("stage","stage","DBSRVDEV");
             if (!$conn) {
               $e = oci_error();
               echo $e['message'].' ciao';
